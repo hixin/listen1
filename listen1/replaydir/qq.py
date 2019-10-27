@@ -2,11 +2,11 @@
 '''
 qq music provider,
 '''
-import HTMLParser
+from html.parser import HTMLParser
 import json
 import logging
 import urllib
-import urllib2
+# import urllib2
 
 from replay import h
 
@@ -175,7 +175,7 @@ def search_track(keyword):
     '''
     return matched qq music songs
     '''
-    keyword = urllib2.quote(keyword.encode("utf8"))
+    keyword = urllib.quote(keyword.encode("utf8"))
     url = 'http://i.y.qq.com/s.music/fcgi-bin/search_for_qq_cp?' + \
         'g_tk=938407465&uin=0&format=jsonp&inCharset=utf-8' + \
         '&outCharset=utf-8&notice=0&platform=h5&needNewCode=1' + \

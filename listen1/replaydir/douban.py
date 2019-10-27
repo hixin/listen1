@@ -7,7 +7,7 @@ import json
 import os.path
 import re
 import urllib
-import HTMLParser
+from html.parser import HTMLParser
 
 from replay import h
 from settings import MEDIA_ROOT

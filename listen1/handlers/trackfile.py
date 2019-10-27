@@ -8,7 +8,7 @@ import shutil
 
 from handlers.base import BaseHandler
 
-from replay import get_provider_by_name
+from replaydir import get_provider_by_name
 from settings import MEDIA_ROOT
 
 import tornado.web
@@ -18,7 +18,7 @@ logger = logging.getLogger('listenone.' + __name__)
 
 
 class TrackFileHandler(BaseHandler):
-    @tornado.web.asynchronous
+    # @tornado.web.asynchronous
     def get(self):
         url = self.get_argument('url', '')
         artist = self.get_argument('artist')

@@ -5,7 +5,7 @@ xiami music provider.
 import json
 import logging
 import urllib
-import urllib2
+# import urllib2
 
 from replay import h
 

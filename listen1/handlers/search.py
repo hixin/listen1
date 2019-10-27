@@ -3,7 +3,7 @@ import logging
 
 from handlers.base import BaseHandler
 
-from replay import get_provider_list
+from replaydir import get_provider_list
 
 logger = logging.getLogger('listenone.' + __name__)
 

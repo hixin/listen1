@@ -11,7 +11,7 @@ import tornado.httpclient
 
 from handlers.base import BaseHandler
 from settings import MEDIA_ROOT
-from replay.douban import get_captcha_token, \
+from replaydir.douban import get_captcha_token, \
     login, remove_douban_token_ck, get_douban_token_ck, set_douban_token_ck
 from models.playlist import PlaylistManager
 

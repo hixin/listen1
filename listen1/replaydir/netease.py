@@ -8,7 +8,7 @@ import json
 import logging
 import os.path
 import urllib
-import urllib2
+# import urllib2
 
 import pyaes
 
@@ -82,7 +82,7 @@ def _encrypted_request(text):
 # 参考 https://github.com/darknessomi/musicbox
 # 歌单（网友精选碟） hot||new http://music.163.com/#/discover/playlist/
 def _top_playlists(category=u'全部', order='hot', offset=0, limit=60):
-    category = urllib2.quote(category.encode("utf8"))
+    category = urllib.quote(category.encode("utf8"))
     action = 'http://music.163.com/api/playlist/list?cat=' + category + \
         '&order=' + order + '&offset=' + str(offset) + \
         '&total=' + ('true' if offset else 'false') + '&limit=' + str(limit)

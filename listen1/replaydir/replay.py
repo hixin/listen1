@@ -6,9 +6,8 @@ import logging
 import os.path
 import sys
 import urllib
-import urllib2
-
-import StringIO
+# import urllib2
+from io import StringIO
 import gzip
 
 
@@ -63,8 +62,8 @@ def h(
     headers.update(extra_headers)
 
     data = urllib.urlencode(v) if v else None
-    req = urllib2.Request(url, data, headers)
-    response = urllib2.urlopen(req)
+    req = urllib.Request(url, data, headers)
+    response = urllib.urlopen(req)
     if progress:
         result = chunk_read(response, report_hook=chunk_report)
     else:
